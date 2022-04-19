@@ -13,11 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {    
+Route::get('/', function () {
 
     $comics = config('comics');
-
-    return view('Characters', ['data' => $comics]);
+    $infos = config('infos');
+    return view('Characters', ['data' => $comics, 'infos' => $infos]);
 });
 
 Route::get('/comics', function () {
