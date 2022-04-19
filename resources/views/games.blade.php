@@ -2,7 +2,7 @@
 
 @section('pageTitle', 'Games')
 
-@section('content')
-    Giochi
+@section('content')    
     @include('partials.jumbotron')
+    @include('partials.blueSection')
 @endsection 

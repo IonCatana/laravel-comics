@@ -3,6 +3,6 @@
 @section('pageTitle', 'fans')
 
 @section('content')
-    Fans
     @include('partials.jumbotron')
+    @include('partials.blueSection')
 @endsection

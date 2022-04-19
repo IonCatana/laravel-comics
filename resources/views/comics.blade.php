@@ -2,7 +2,7 @@
 
 @section('pageTitle', 'comics')
 
-@section('content')
-    Fumetti
+@section('content')   
     @include('partials.jumbotron')
+    @include('partials.blueSection')
 @endsection 

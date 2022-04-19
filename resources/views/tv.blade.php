@@ -2,7 +2,7 @@
 
 @section('pageTitle', 'TV')
 
-@section('content')
-    TV
+@section('content')    
     @include('partials.jumbotron')
+    @include('partials.blueSection')
 @endsection

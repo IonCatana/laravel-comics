@@ -2,7 +2,7 @@
 
 @section('pageTitle', 'Collectibles')
 
-@section('content')
-    Collezioni
+@section('content')    
     @include('partials.jumbotron')
+    @include('partials.blueSection')
 @endsection

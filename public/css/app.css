@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap);
 
+/* Common  */
 * {
   margin: 0;
   padding: 0;
@@ -22,6 +23,7 @@ li a {
   color: black;
 }
 
+/* Header */
 header {
   display: flex;
   justify-content: space-between;
@@ -102,6 +104,72 @@ header .right-header nav ul li a:hover {
   left: 10%;
 }
 
+/* Section Blue */
+.info {
+  background-color: #0282f9;
+  height: 150px;
+}
+
+.info ul {
+  display: flex;
+  justify-content: space-around;
+  height: 150px;
+  position: relative;
+  z-index: 2;
+}
+
+.info ul li {
+  display: flex;
+  align-items: center;
+}
+
+.info ul li img {
+  height: 40px;
+  width: auto;
+}
+
+.info ul li a {
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  padding-left: 5px;
+}
+
+.info ul li .smaller {
+  height: 30px;
+  width: auto;
+}
+
+@media (max-width: 900px) {
+  .info li {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .info li .smaller {
+    margin-bottom: 10px;
+    transform: translateY(10px);
+  }
+}
+
+@media (max-width: 730px) {
+  .info .container {
+    overflow-x: hidden;
+  }
+
+  .info .container li {
+    margin: 0 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .info .container li {
+    margin: 0 110px;
+  }
+}
+
+/* Top Footer */
 .top-footer {
   background-image: url('/img/footer-bg.jpg');
   height: 300px;
@@ -158,6 +226,7 @@ header .right-header nav ul li a:hover {
   top: -30%;
 }
 
+/* Bottom Footer */
 .bottom-footer {
   height: 100px;
   background-color: #303030;

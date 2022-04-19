@@ -2,7 +2,7 @@
 
 @section('pageTitle', 'Videos')
 
-@section('content')
-    Video
+@section('content')    
     @include('partials.jumbotron')
+    @include('partials.blueSection')
 @endsection

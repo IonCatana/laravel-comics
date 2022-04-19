@@ -2,7 +2,7 @@
 
 @section('pageTitle', 'News')
 
-@section('content')
-    Novità
+@section('content')   
     @include('partials.jumbotron')
+    @include('partials.blueSection')
 @endsection 

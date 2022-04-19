@@ -10,15 +10,16 @@
 </head>
 
 <body>
-
+    {{-- Header --}}
     @include('partials.header')
 
+    {{-- Main --}}
     <main>
 
         @yield('content')
-
+        
     </main>
-
+    {{-- Footer --}}
     @include('partials.footer')
 
 </body>
