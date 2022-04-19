@@ -33,7 +33,11 @@
 
                 @foreach ($infos as $item)
                     <li>
-                        <img src="{{ $item['img'] }}" alt="{{ $item['text'] }}">
+                        @if ($loop->last)
+                            <img class="smaller" src="{{ $item['img'] }}" alt="{{ $item['text'] }}">
+                        @else
+                            <img src="{{ $item['img'] }}" alt="{{ $item['text'] }}">
+                        @endif
                         <a href="{{ $item['url'] }}">{{ $item['text'] }}</a>
                     </li>
                 @endforeach
