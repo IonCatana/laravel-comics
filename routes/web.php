@@ -13,8 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('Characters');
+Route::get('/', function () {    
+
+    $comics = config('comics');
+
+    return view('Characters', ['data' => $comics]);
 });
 
 Route::get('/comics', function () {
