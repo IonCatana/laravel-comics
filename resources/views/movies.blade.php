@@ -4,4 +4,5 @@
 
 @section('content')
     Film
+    @include('partials.jumbotron')
 @endsection 

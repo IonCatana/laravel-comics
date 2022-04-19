@@ -4,4 +4,5 @@
 
 @section('content')
     Video
+    @include('partials.jumbotron')
 @endsection

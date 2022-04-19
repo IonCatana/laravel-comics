@@ -4,4 +4,5 @@
 
 @section('content')
     Novità
+    @include('partials.jumbotron')
 @endsection 

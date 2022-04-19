@@ -4,4 +4,5 @@
 
 @section('content')
     Fumetti
+    @include('partials.jumbotron')
 @endsection 

@@ -4,4 +4,5 @@
 
 @section('content')
     Fans
+    @include('partials.jumbotron')
 @endsection

@@ -3,5 +3,5 @@
 @section('pageTitle', 'Characters')
 
 @section('content')
-    Caratteri
+    @include('partials.jumbotron')
 @endsection

@@ -4,4 +4,5 @@
 
 @section('content')
     Giochi
+    @include('partials.jumbotron')
 @endsection 

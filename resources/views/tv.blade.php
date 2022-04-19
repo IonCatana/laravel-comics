@@ -4,4 +4,5 @@
 
 @section('content')
     TV
+    @include('partials.jumbotron')
 @endsection

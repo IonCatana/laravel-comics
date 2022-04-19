@@ -4,4 +4,5 @@
 
 @section('content')
     Shop
+    @include('partials.jumbotron')
 @endsection
