@@ -38,7 +38,7 @@ Route::get('/fumetto/{index_fumetto}', function ($index_fumetto) {
         $fumetto_scelto = $dettaglio[$index_fumetto];
 
         /* stabilisco la rotta verso il file fumetto passando il numero relativo all'indice del fumetto scelto */
-        return view('fumetto', ['numero_indice' => $fumetto_scelto, 'colonne' => $colonne, 'socials' => $socials]);
+        return view('fumetto', ['array_indice' => $fumetto_scelto, 'colonne' => $colonne, 'socials' => $socials]);
     } else {
         /* nel caso in cui l'utente selezioni un fumetto disponibile mostro un messaggio di errore */
         abort(403, 'Fumetto non disponibile');
@@ -47,54 +47,63 @@ Route::get('/fumetto/{index_fumetto}', function ($index_fumetto) {
 
 Route::get('/comics', function () {
     $colonne = config('colonne_footer');
+    $infos = config('infos');
     $socials = config('socials');
-    return view('Comics', ['colonne' => $colonne, 'socials' => $socials]);
+    return view('Comics', ['colonne' => $colonne, 'infos' => $infos, 'socials' => $socials]);
 })->name("comics");
 
 Route::get('/movies', function () {
     $colonne = config('colonne_footer');
+    $infos = config('infos');
     $socials = config('socials');
-    return view('movies', ['colonne' => $colonne, 'socials' => $socials]);
+    return view('movies', ['colonne' => $colonne, 'infos' => $infos, 'socials' => $socials]);
 })->name("movies");
 
 Route::get('/tv', function () {
     $colonne = config('colonne_footer');
+    $infos = config('infos');
     $socials = config('socials');
-    return view('tv', ['colonne' => $colonne, 'socials' => $socials]);
+    return view('tv', ['colonne' => $colonne, 'infos' => $infos, 'socials' => $socials]);
 })->name("tv");
 
 Route::get('/games', function () {
     $colonne = config('colonne_footer');
+    $infos = config('infos');
     $socials = config('socials');
-    return view('games', ['colonne' => $colonne, 'socials' => $socials]);
+    return view('games', ['colonne' => $colonne, 'infos' => $infos, 'socials' => $socials]);
 })->name("games");
 
 Route::get('/collectibles', function () {
     $colonne = config('colonne_footer');
+    $infos = config('infos');
     $socials = config('socials');
-    return view('collectibles', ['colonne' => $colonne, 'socials' => $socials]);
+    return view('collectibles', ['colonne' => $colonne, 'infos' => $infos, 'socials' => $socials]);
 })->name("collectibles");
 
 Route::get('/videos', function () {
     $colonne = config('colonne_footer');
+    $infos = config('infos');
     $socials = config('socials');
-    return view('videos', ['colonne' => $colonne, 'socials' => $socials]);
+    return view('videos', ['colonne' => $colonne, 'infos' => $infos, 'socials' => $socials]);
 })->name("videos");
 
 Route::get('/fans', function () {
     $colonne = config('colonne_footer');
+    $infos = config('infos');
     $socials = config('socials');
-    return view('fans', ['colonne' => $colonne, 'socials' => $socials]);
+    return view('fans', ['colonne' => $colonne, 'infos' => $infos, 'socials' => $socials]);
 })->name("fans");
 
 Route::get('/news', function () {
     $colonne = config('colonne_footer');
+    $infos = config('infos');
     $socials = config('socials');
-    return view('news', ['colonne' => $colonne, 'socials' => $socials]);
+    return view('news', ['colonne' => $colonne, 'infos' => $infos, 'socials' => $socials]);
 })->name("news");
 
 Route::get('/shop', function () {
     $colonne = config('colonne_footer');
+    $infos = config('infos');
     $socials = config('socials');
-    return view('shop', ['colonne' => $colonne, 'socials' => $socials]);
+    return view('shop', ['colonne' => $colonne, 'infos' => $infos, 'socials' => $socials]);
 })->name("shop");
