@@ -207,6 +207,23 @@ header .right-header nav ul li a:hover {
   width: auto;
   border: 1px solid white;
 }
+.comic_book{
+  position: absolute;
+  background-color: rgb(1, 162, 191);
+  color: white;
+  padding: 0 5px;
+}
+h5{
+  font-size: 10px;
+}
+.view_gallery{
+  width: 100%;
+  position: absolute;
+  background-color: rgb(1, 162, 191);
+  color: white;
+  bottom: 0;  
+  text-align: center;
+}
 
 .fumetto .img-hero img {
   -o-object-fit: contain;

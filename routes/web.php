@@ -28,6 +28,7 @@ Route::get('/fumetto/{index_fumetto}', function ($index_fumetto) {
 
     /* per far funzionare la pagina devo passare gli stessi data che andranno poi a footer */
     $colonne = config('colonne_footer');
+    $infos = config('infos');
     $socials = config('socials');
 
     /* riprendo l'array con i dati dei fumetti e lo salvo in una variabile */
@@ -40,7 +41,7 @@ Route::get('/fumetto/{index_fumetto}', function ($index_fumetto) {
         $fumetto_scelto = $dettaglio[$index_fumetto];
 
         /* stabilisco la rotta verso il file fumetto passando il numero relativo all'indice del fumetto scelto */
-        return view('fumetto', ['array_indice' => $fumetto_scelto, 'colonne' => $colonne, 'socials' => $socials]);
+        return view('fumetto', ['array_indice' => $fumetto_scelto, 'colonne' => $colonne, 'infos' => $infos, 'socials' => $socials]);
     } else {
         /* nel caso in cui l'utente selezioni un fumetto disponibile mostro un messaggio di errore */
         abort(403, 'Fumetto non disponibile');

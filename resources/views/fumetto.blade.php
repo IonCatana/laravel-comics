@@ -13,7 +13,13 @@
         <div class="blue-line"></div>
 
         <div class="img-hero">
+            <div class="comic_book">
+                <h5>Comic Book</h5>
+            </div>
             <img src="{{ $array_indice['thumb'] }}" alt="{{ $array_indice['title'] }}">
+            <div class="view_gallery">
+                <h5>View Gallery</h5>
+            </div>
         </div>
 
         <div class="text-fumetto">
@@ -101,5 +107,6 @@
             </div>
         </div>
     </div>
+    @include('partials.blueSection')
 
 @endsection
