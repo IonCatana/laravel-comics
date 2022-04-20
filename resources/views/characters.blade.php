@@ -1,21 +1,35 @@
+{{-- estendo il layout di default per questa pagina --}}
 @extends('layouts.default')
 
+{{-- al titolo da dare a questa pagina specifica assegno "Characters" --}}
 @section('pageTitle', 'Characters')
 
+{{-- aggiungo qui tutto il contenuto --}}
 @section('content')
+
     <div class="main-content">
 
+        {{-- icludo il jumotron dinamicamente --}}
         @include('partials.jumbotron')
+
+        {{-- utilizzo javascript per creare una funzione che indirizzi l'utente alla pagina corrispondente al fumetto cliccato --}}
+        <script type="text/javascript">
+            function myhref(web) {
+                window.location.href = web;
+            }
+        </script>
 
         <div class="container">
 
-            @foreach ($data as $item)
-                <div class="cards">
+            {{-- ciclo i dati per popolare dinamicamente le cards presenti nella pagina --}}
+            @foreach ($data as $key => $item)
+                {{-- utilizzo onlick sul div in modo da richiamare la funzione dedicata al redirect della pagina --}}
+                {{-- con route() definisco il link da passare tenendo 'fumetto' come base e aggiungo l'indice del fumetto selezionato nella pagina seguente --}}
+                <div class="cards" onclick="myhref( '{{ route('fumetto', ['index_fumetto' => $key]) }}' );">
 
+                    {{-- utilizzo la funzione asset() perché le immagini sono nella cartella public --}}
                     <img src="{{ asset($item['thumb']) }}" alt="{{ $item['title'] }}">
-
                     <h4>{{ $item['title'] }}</h4>
-
                 </div>
             @endforeach
 
@@ -31,11 +45,15 @@
         <div class="container">
             <ul>
 
+                {{-- ciclo gli elementi dell'array info --}}
                 @foreach ($infos as $item)
                     <li>
+                        {{-- se l'immagine ciclata è l'ultima --}}
                         @if ($loop->last)
+                            {{-- aggiungo una classe "smaller" per renderla più piccola --}}
                             <img class="smaller" src="{{ $item['img'] }}" alt="{{ $item['text'] }}">
                         @else
+                            {{-- altrimenti non aggiungo nessuna classe --}}
                             <img src="{{ $item['img'] }}" alt="{{ $item['text'] }}">
                         @endif
                         <a href="{{ $item['url'] }}">{{ $item['text'] }}</a>
