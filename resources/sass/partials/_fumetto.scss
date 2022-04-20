@@ -1,0 +1,35 @@
+@import "./variables.scss";
+
+.fumetto {
+  position: relative;
+
+  .blue-line {
+    background-color: $mainColor;
+    height: 50px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: calc($heightRow3 - 25px);
+  }
+
+  .img-hero {
+    position: absolute;
+    left: 20%;
+    top: $heightRow1;
+    height: calc($heightRow1 * 2);
+    width: auto;
+    border: 1px solid white;
+
+    img {
+      object-fit: contain;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .text-fumetto {
+    width: 60%;
+    margin: auto;
+    padding: 50px 0;
+  }
+}

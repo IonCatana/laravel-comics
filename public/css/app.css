@@ -115,6 +115,10 @@ header .right-header nav ul li a:hover {
   padding-top: 40px;
 }
 
+.main-content .container .cards {
+  cursor: pointer;
+}
+
 .main-content .load-more {
   text-align: center;
 }
@@ -179,6 +183,42 @@ header .right-header nav ul li a:hover {
   .cards img {
     height: 80%;
   }
+}
+
+/* Fumetto */
+.fumetto {
+  position: relative;
+}
+
+.fumetto .blue-line {
+  background-color: #0282f9;
+  height: 50px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 275px;
+}
+
+.fumetto .img-hero {
+  position: absolute;
+  left: 20%;
+  top: 100px;
+  height: 200px;
+  width: auto;
+  border: 1px solid white;
+}
+
+.fumetto .img-hero img {
+  -o-object-fit: contain;
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+}
+
+.fumetto .text-fumetto {
+  width: 60%;
+  margin: auto;
+  padding: 50px 0;
 }
 
 /* Section Blue */

@@ -25,6 +25,8 @@ Route::get('/', function () {
 
 /* creo una route dinamica per ogni fumetto presente nella route home */
 Route::get('/fumetto/{index_fumetto}', function ($index_fumetto) {
+
+    /* per far funzionare la pagina devo passare gli stessi data che andranno poi a footer */
     $colonne = config('colonne_footer');
     $socials = config('socials');
 
@@ -43,6 +45,7 @@ Route::get('/fumetto/{index_fumetto}', function ($index_fumetto) {
         /* nel caso in cui l'utente selezioni un fumetto disponibile mostro un messaggio di errore */
         abort(403, 'Fumetto non disponibile');
     }
+    /* assegno un nome a questa route */
 })->name('fumetto');
 
 Route::get('/comics', function () {
