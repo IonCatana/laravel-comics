@@ -1,7 +1,7 @@
 {{-- estendo il layout di default per questa pagina --}}
 @extends('layouts.default')
 
-{{-- al titolo da dare a questa pagina specifica assegno "fumetto" --}}
+{{-- al titolo da dare a questa pagina specifica assegno il titolo presente nell'array passato da Route --}}
 @section('pageTitle', $array_indice['title'])
 
 @section('content')
